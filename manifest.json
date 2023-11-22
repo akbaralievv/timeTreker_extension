@@ -1,0 +1,47 @@
+{
+  "name": "Time Treker",
+  "description": "time treker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "alarms", 
+    "notifications", 
+    "storage",
+    "tabs",
+    "cookies", 
+    "declarativeNetRequest",
+    "management",
+    "system.display"
+    ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "scripts/service_worker.js",
+    "type":"module"
+  },
+  "action": {
+    "default_title": "Time Treker",
+    "default_popup": "popups/popup.html"
+  },
+  "icons": {
+    "16": "assets/logo.png",
+    "32": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+  "content_security_policy": {
+  "extension_pages": "script-src 'self'; object-src 'self'; font-src https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com;"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+
+    ]
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  }
+}

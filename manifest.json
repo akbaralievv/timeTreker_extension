@@ -1,6 +1,6 @@
 {
   "name": "Time Treker",
-  "description": "time treker",
+  "description": "Convenient tracking of task completion time. Improved privacy by removing the Cookie header from requests. Easy access to the list of cookies. Permission management.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
@@ -11,7 +11,8 @@
     "cookies", 
     "declarativeNetRequest",
     "management",
-    "system.display"
+    "system.display",
+    "declarativeNetRequestFeedback"
     ],
   "host_permissions": ["<all_urls>"],
   "background": {
@@ -33,7 +34,11 @@
   },
   "declarative_net_request": {
     "rule_resources": [
-
+        {
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+        }
     ]
   },
   "commands": {

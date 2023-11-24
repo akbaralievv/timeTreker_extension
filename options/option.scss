@@ -2,18 +2,29 @@
 $white: #fff;
 $main-color: #643A7A;
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #201C29;
+    padding: 10px;
+}
+
+.content{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .frame {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    margin-top: -200px;
-    margin-left: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
     border-radius: 2px;
     box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
     background: $main-color;
@@ -25,20 +36,32 @@ body {
 }
 
 .list {
-    position: absolute;
     width: 240px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: $white;
     box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.15);
     border-radius: 3px;
 }
 
+.list .basket_wrapper{
+    display: flex;
+    justify-content: end;
+    padding-right: 5px;
+    padding-top: 5px;
+    .basket{
+        display: inline-block;
+        width: 22px;
+        cursor: pointer;
+    }
+}
+
+
 .list .head {
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0 30px;
     border-bottom: 1px solid rgba(100, 58, 122, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .list .title {
@@ -53,6 +76,19 @@ body {
     font-size: .9rem;
     text-align: center;
     letter-spacing: .5px;
+}
+
+.list .time{
+    text-align: center;
+    margin-top: 5px;
+    display: inline-block;
+    background: green;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+}
+.list .time_is_up{
+    background: red;
 }
 
 .list ul {
@@ -74,6 +110,10 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 88%;
 }
 
 ul li:nth-of-type(2) {
@@ -155,4 +195,31 @@ ul li .wrapper {
     100% {
         stroke-dashoffset: 0;
     }
+}
+
+.timeTreker_wrapper{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.timeTreker{
+    width: 50px;
+}
+.timeTreker_wrapper button{
+    appearance: none;
+    border: none;
+    background: #643A7A;
+    color: white;
+    border-radius: 4px;
+    width: 55px;
+    height: 20px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.timeTracker_btns{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

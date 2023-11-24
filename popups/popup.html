@@ -9,29 +9,47 @@
   <body>
     <div class="wrapper">
       <div class="content">
-        <button class="openOptions">Open Options</button>
         <div class="form-structor">
+          <div class="menu">
+            <img src="../assets/burger_menu.png" alt="burger" id="openOptions" />
+          </div>
           <div class="signup">
-            <h2 class="form-title" id="signup"><span>or</span>New task</h2>
+            <h2 class="form-title" id="signup"><span>or</span>New assignment</h2>
             <div class="form-holder">
               <input type="text" class="input" id="taskName" placeholder="Name" />
               <input type="datetime-local" class="input" id="taskDate" placeholder="Email" />
             </div>
-            <button class="submit-btn">Create task</button>
+            <button class="submit-btn">Create assignment</button>
           </div>
           <div class="login slide-up">
             <div class="center">
               <h2 class="form-title" id="login"><span>or</span>Others</h2>
               <div class="form-holder">
-                <input type="email" class="input" placeholder="Email" />
-                <input type="password" class="input" placeholder="Password" />
+                <div class="checkbox-wrapper-43">
+                  <input type="checkbox" id="cbx-43" />
+                  <label for="cbx-43" class="check">
+                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                      <path
+                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"
+                      ></path>
+                      <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                  </label>
+                </div>
+                <p>Prohibit the provision of information about cookies</p>
               </div>
-              <button class="submit-btn">Log in</button>
+              <div class="cookies_list">
+                <h3 id="url_address">List of cookies on this page</h3>
+              </div>
+              <!-- <button class="submit-btn">Log in</button> -->
+              <div class="permissions">
+                <h3>Permissions we request</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
-  <script src="./popup.js"></script>
+  <script src="./popup.js" type="module"></script>
 </html>

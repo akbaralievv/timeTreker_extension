@@ -1,16 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Zilla+Slab:300,400");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background: #201C29;
+  padding: 10px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .frame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  height: 280px;
   border-radius: 2px;
   -webkit-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
           box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
@@ -23,22 +44,43 @@ body {
 }
 
 .list {
-  position: absolute;
   width: 240px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background: #fff;
   -webkit-box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.15);
           box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 }
 
+.list .basket_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+.list .basket_wrapper .basket {
+  display: inline-block;
+  width: 22px;
+  cursor: pointer;
+}
+
 .list .head {
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 30px;
   border-bottom: 1px solid rgba(100, 58, 122, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .list .title {
@@ -53,6 +95,20 @@ body {
   font-size: 0.9rem;
   text-align: center;
   letter-spacing: 0.5px;
+}
+
+.list .time {
+  text-align: center;
+  margin-top: 5px;
+  display: inline-block;
+  background: green;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.list .time_is_up {
+  background: red;
 }
 
 .list ul {
@@ -75,6 +131,10 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 88%;
 }
 
 ul li:nth-of-type(2) {
@@ -172,4 +232,45 @@ ul li .wrapper {
   100% {
     stroke-dashoffset: 0;
   }
+}
+.timeTreker_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.timeTreker {
+  width: 50px;
+}
+
+.timeTreker_wrapper button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: #643A7A;
+  color: white;
+  border-radius: 4px;
+  width: 55px;
+  height: 20px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.timeTracker_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
 }
